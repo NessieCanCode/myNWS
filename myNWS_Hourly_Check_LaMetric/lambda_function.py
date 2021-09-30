@@ -16,7 +16,6 @@ def lambda_handler(event, context):
             nws_alert_headline = data['features'][0]['properties']['headline']
             nws_alert_description = data['features'][0]['properties']['description']
             nws_icon = 16701
-        
     else:
         url = "https://api.weather.gov/alerts?active=true&status=actual&message_type=alert"
         response = requests.get(url)
