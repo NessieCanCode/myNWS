@@ -1,4 +1,4 @@
-# myNWS-Alerts
+# myNWS
 A simple python script to scrap weather Alerts from National Oceanic and Atmospheric Administration (NOAA).
 
 Python 3.9 and Requests Package
