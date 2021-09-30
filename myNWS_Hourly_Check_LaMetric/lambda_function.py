@@ -18,8 +18,12 @@ def lambda_handler(event, context):
                         nws_alert_headline = data['features'][i]['properties']['headline']
                         nws_alert_description = data['features'][i]['properties']['description']
                         nws_icon = 16701
+                    else:
+                        nws_alert_headline = data['title']
+                        nws_alert_description = "There are no active watches, warnings or advisories"
+                        nws_icon = 46935
             except:
-                nws_alert_headline = county_code #data['title']
+                nws_alert_headline = data['title']
                 nws_alert_description = "There are no active watches, warnings or advisories"
                 nws_icon = 46935
     else:
