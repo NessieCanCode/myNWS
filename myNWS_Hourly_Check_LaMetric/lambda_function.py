@@ -8,7 +8,7 @@ def lambda_handler(event, context):
         url = "https://api.weather.gov/alerts/active/zone/" + county_code
         response = requests.get(url)
         data = response.json()
-        if None in data['features']:
+        if if None in data['features'] or data['features'] == []:
             nws_alert_headline = data['title']
             nws_alert_description = "There are no active watches, warnings or advisories"
             nws_icon = 46935
